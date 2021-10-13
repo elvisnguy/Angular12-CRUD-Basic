@@ -1,0 +1,48 @@
+<!-- <form *ngIf="user" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      name="name"
+      [(ngModel)]="user.name"
+      placeholder="name@example.com"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input
+      type="email"
+      name="userEmail"
+      class="form-control"
+      [(ngModel)]="user.email"
+      placeholder="name@example.com"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+
+<!-- Using Reactive form -->
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="name"
+      placeholder="name@example.com"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input
+      type="email"
+      class="form-control"
+      formControlName="email"
+      placeholder="name@example.com"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

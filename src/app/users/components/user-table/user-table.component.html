@@ -1,0 +1,15 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">name</th>
+      <th scope="col">email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" routerLink="./{{ user.id }}">
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td><button (click)="onDelete(user.id)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
